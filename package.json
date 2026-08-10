@@ -1,0 +1,29 @@
+{
+  "name": "scanmind",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx"
+  },
+  "dependencies": {
+    "dexie": "^4.0.0-alpha.0",
+    "framer-motion": "^10.16.4",
+    "html2canvas": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.10.3",
+    "tesseract.js": "^5.0.4",
+    "uuid": "^9.0.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "sharp": "^0.35.3",
+    "vite": "^4.3.9",
+    "vite-plugin-pwa": "^0.16.0"
+  }
+}

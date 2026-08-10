@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--spacing-m);
+}
+
+.form {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-l);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+  margin-bottom: var(--spacing-l);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-l);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-s);
+  color: var(--color-text-primary);
+}
+
+.input {
+  width: 100%;
+  padding: 10px var(--spacing-m);
+  border: 1px solid var(--color-separator);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.6);
+  font-family: inherit;
+  transition: all 0.2s ease-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 2px rgba(47, 75, 124, 0.1);
+}
+
+.tagInput {
+  display: flex;
+  gap: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
+}
+
+.tagInput input {
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  gap: var(--spacing-s);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-s);
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.tag button:hover {
+  opacity: 0.7;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-m);
+  margin-top: var(--spacing-l);
+}
+
+.actions button {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: var(--spacing-s);
+  }
+
+  .form {
+    padding: var(--spacing-m);
+  }
+
+  .form h2 {
+    font-size: 18px;
+  }
+}

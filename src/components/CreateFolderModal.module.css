@@ -1,0 +1,95 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: var(--spacing-m);
+}
+
+.modal {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-l);
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  margin-bottom: var(--spacing-l);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-l);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-s);
+  color: var(--color-text-primary);
+}
+
+.input {
+  width: 100%;
+  padding: 10px var(--spacing-m);
+  border: 1px solid var(--color-separator);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  transition: all 0.2s ease-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 2px rgba(47, 75, 124, 0.1);
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-s);
+}
+
+.colorButton {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.colorButton:hover {
+  transform: scale(1.05);
+}
+
+.colorButton.selected {
+  border-color: white;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-m);
+  margin-top: var(--spacing-l);
+}
+
+.actions button {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .modal {
+    padding: var(--spacing-m);
+  }
+
+  .colorGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

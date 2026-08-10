@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--spacing-m);
+  width: 100%;
+}
+
+.folderCard {
+  position: relative;
+  padding: var(--spacing-m);
+  background: var(--color-surface);
+  border: 1px solid var(--color-separator);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-s);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.folderCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.folderIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  background: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.folderName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(217, 107, 74, 0.9);
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.folderCard:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  background: rgba(217, 107, 74, 1);
+  transform: scale(1.1);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

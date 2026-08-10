@@ -1,0 +1,190 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: var(--spacing-m);
+}
+
+.modal {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-l);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-l);
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  color: var(--color-text-primary);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--spacing-s);
+  margin: var(--spacing-m) 0;
+  border-bottom: 1px solid var(--color-separator);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-s);
+}
+
+.tab {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--color-text-primary);
+}
+
+.tab.active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.tabLabel {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .tabLabel {
+    display: inline;
+  }
+}
+
+.content {
+  min-height: 200px;
+  margin: var(--spacing-l) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.image {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+
+.ocrText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: var(--spacing-m);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.exercise {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-l) 0;
+}
+
+.exerciseActions {
+  display: flex;
+  gap: var(--spacing-m);
+  width: 100%;
+}
+
+.exerciseActions button {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-m);
+  margin-top: var(--spacing-l);
+  border-top: 1px solid var(--color-separator);
+  padding-top: var(--spacing-l);
+}
+
+.deleteButton {
+  padding: 12px 20px;
+  background: rgba(217, 107, 74, 0.1);
+  color: #D96B4A;
+  border: 1px solid rgba(217, 107, 74, 0.3);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.deleteButton:hover {
+  background: rgba(217, 107, 74, 0.2);
+}
+
+@media (max-width: 640px) {
+  .modal {
+    border-radius: var(--radius-md);
+    max-height: 95vh;
+  }
+
+  .tabs {
+    gap: var(--spacing-xs);
+  }
+
+  .tab {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .tabLabel {
+    display: none !important;
+  }
+}

@@ -1,0 +1,88 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: var(--spacing-m);
+  
+  @supports (padding: max(0px)) {
+    padding-bottom: calc(var(--spacing-m) + max(0px, env(safe-area-inset-bottom)));
+  }
+}
+
+.tabBar {
+  pointer-events: all;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-s);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tabBar {
+    background: rgba(28, 28, 31, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
+.tabButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  padding: 12px 16px;
+  background: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex: 0 1 auto;
+}
+
+.tabButton.active {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent));
+  color: white;
+}
+
+.icon {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.label {
+  display: inline-block;
+  min-width: 50px;
+  text-align: left;
+}
+
+.tabButton:active:not(.active) {
+  transform: scale(0.95);
+}
+
+@media (max-width: 640px) {
+  .tabButton {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .tabBar {
+    padding: var(--spacing-xs);
+  }
+}
