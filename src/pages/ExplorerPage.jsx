@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAppStore } from '../store/appStore';
 import { motion } from 'framer-motion';
 import FolderGrid from '../components/FolderGrid';
-import CardGrid from '../components/CardGrid';
+import { CardGrid } from '../components/CardGrid';
 import CreateFolderModal from '../components/CreateFolderModal';
 import styles from './ExplorerPage.module.css';
 
