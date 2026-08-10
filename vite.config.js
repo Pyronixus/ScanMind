@@ -62,7 +62,11 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    target: 'esnext',
     sourcemap: false,
     minify: 'terser'
+  },
+  esbuild: {
+    target: 'esnext'
   }
 })
