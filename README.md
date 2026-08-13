@@ -1,4 +1,4 @@
-# ScanMind ![favicon](public/icon-512.png =70x70)
+# ScanMind <img alt="favicon" src="public/icon-512.png" width="70"/>
 
 <div align="center">
 
