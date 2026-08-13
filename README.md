@@ -1,4 +1,4 @@
-# ScanMind 
+# ScanMind ![favicon](public/icon-512.png)
 
 <div align="center">
 
